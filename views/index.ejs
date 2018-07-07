@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My To Do List</title>
+</head>
+<body>
+	You have lots of stuff to do.<br><br>
+
+	<form action="/tasks" method="POST">
+		<input type="text" placeholder="Title" name="title">
+		<input type="text" placeholder="Description" name="description">
+		<button type="submit">Create task</button>
+	</form>
+
+	<ul class="tasks">
+		<% for(var i=0; i<tasks.length; i++) {%>
+		<li class="quote">
+			<span><%= tasks[i].title %></span>
+			<span><%= tasks[i].description %></span>
+		</li>
+		<% } %>
+	</ul>
+
+	
+
+</body>
+</html>
